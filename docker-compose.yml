@@ -1,0 +1,13 @@
+services:
+  radar:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - radar_data:/data
+    env_file:
+      - backend/.env
+    restart: unless-stopped
+
+volumes:
+  radar_data:
