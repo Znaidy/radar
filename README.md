@@ -70,10 +70,3 @@ cd backend && python -m pytest tests/ -v
 
 Apache License 2.0 — see [LICENSE](LICENSE).
 
-## Author
-
-**zerox9dev**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zerox9dev)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)](https://github.com/zerox9dev)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?logo=telegram&logoColor=white)](https://t.me/zerox9dev)
