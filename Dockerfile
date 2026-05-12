@@ -11,8 +11,7 @@ FROM python:3.11-slim
 
 WORKDIR /app/backend
 COPY backend/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt \
- && playwright install --with-deps chromium
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/ ./
 COPY --from=frontend-builder /backend/frontend-dist ./frontend-dist

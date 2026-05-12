@@ -15,7 +15,8 @@ Telegram lead intelligence — 24/7 channel monitoring, on-demand search, CRM pi
 
 | Layer | Tech |
 |---|---|
-| Backend | Python 3.11+, FastAPI, Uvicorn, SQLite |
+| Backend | Python 3.11+, FastAPI, Uvicorn |
+| Database | External Postgres (via `DATABASE_URL`) |
 | Telegram | Telethon (MTProto) |
 | Frontend | React 19, TypeScript, Vite, React Router |
 | UI | shadcn/ui, Tailwind CSS v4 (monochrome theme) |
@@ -25,10 +26,11 @@ Telegram lead intelligence — 24/7 channel monitoring, on-demand search, CRM pi
 
 ```bash
 cp backend/.env.example backend/.env
+# Fill DATABASE_URL pointing at your external Postgres
 docker compose up --build
 ```
 
-Open `http://localhost:8000`. Data persists in a named Docker volume. Configure API keys via the **Settings** page.
+Open `http://localhost:8000`. Telegram session files persist in a named Docker volume; application data lives in your external Postgres. Configure Telegram API keys via the **Settings** page.
 
 ## Manual setup
 
@@ -39,6 +41,7 @@ pip install -r requirements.txt
 
 # 2. Environment
 cp .env.example .env
+# Fill DATABASE_URL pointing at your external Postgres
 
 # 3. Build frontend
 cd ../frontend && npm install && npm run build

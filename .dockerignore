@@ -5,12 +5,7 @@ backend/frontend-dist/
 backend/*.session
 backend/*.session-journal
 backend/config.json
-backend/hh_sent.json
-backend/djinni_sent.json
-backend/hh_cookies.json
-backend/djinni_cookies.json
 backend/logs/
-backend/all_sent_users.txt
 backend/*_pid.txt
 .git/
 .claude/
